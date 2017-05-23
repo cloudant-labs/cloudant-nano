@@ -1,12 +1,19 @@
 {
-  "name": "nano",
-  "description": "The official CouchDB client for Node.js",
+  "name": "cloudant-nano",
+  "description": "A minimalistic Cloudant/CouchDB driver for Node.js",
   "license": "Apache-2.0",
-  "homepage": "http://github.com/apache/couchdb-nano",
-  "repository": "http://github.com/apache/couchdb-nano",
+  "homepage": "https://github.com/cloudant-labs/cloudant-nano",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cloudant-labs/cloudant-nano.git"
+  },
   "version": "6.3.0",
-  "author": "Apache CouchDB <dev@couchdb.apache.org> (http://couchdb.apache.org)",
+  "author": {
+    "name": "IBM Cloudant",
+    "email": "support@cloudant.com"
+  },
   "keywords": [
+    "cloudant",
     "couchdb",
     "data",
     "request",
