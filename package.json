@@ -17,8 +17,8 @@
     "database"
   ],
   "dependencies": {
-    "request": "^2.76.0",
-    "follow": "^0.12.1",
+    "request": "^2.81.0",
+    "cloudant-follow": "^0.13.0",
     "errs": "^0.3.2",
     "underscore": "^1.8.3",
     "debug": "^2.2.0"
@@ -34,7 +34,7 @@
     "tape-it": "^0.3.1"
   },
   "scripts": {
-    "test": "bash scripts/run_couchdb_on_travis.sh; npm run mocha; bash scripts/stop_couchdb_on_travis.sh",
+    "test": "bash scripts/run_couchdb_on_travis.sh && npm run mocha && bash scripts/stop_couchdb_on_travis.sh",
     "mocha": "DEBUG=* NOCK_OFF=true istanbul cover tape tests/*/*/*.js",
     "unmocked": "NOCK_OFF=true tape tests/*/*/*.js",
     "mocked": "tape tests/*/*/*.js",
