@@ -15,8 +15,10 @@
 'use strict';
 
 var url;
+var usingCloudant = false;
 
-if (process.env.CLOUDANT_USERNAME !== 'undefined' && process.env.CLOUDANT_PASSWORD !== 'undefined') {
+if ((typeof process.env.CLOUDANT_USERNAME !== 'undefined') && (typeof process.env.CLOUDANT_PASSWORD !== 'undefined')) {
+    usingCloudant = true;
     var user = process.env.CLOUDANT_USERNAME;
     var pass = process.env.CLOUDANT_PASSWORD;
     url = `https://${user}:${pass}@${user}.cloudant.com`;
@@ -25,5 +27,6 @@ if (process.env.CLOUDANT_USERNAME !== 'undefined' && process.env.CLOUDANT_PASSWO
 module.exports = {
     admin: url || 'http://admin:password@localhost:5984',
     couch: url || 'http://localhost:5984',
-    timeout: process.env.TIMEOUT || 5000
+    timeout: parseInt(process.env.TIMEOUT) || 5000,
+    usingCloudant: usingCloudant
 }

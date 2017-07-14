@@ -33,6 +33,8 @@ helpers.pixel = 'Qk06AAAAAAAAADYAAAAoAAAAAQAAAP////8BABgAAAAA' +
 helpers.username = auth[0];
 helpers.password = auth[1];
 
+helpers.usingCloudant = cfg.usingCloudant;
+
 helpers.loadFixture = function helpersLoadFixture(filename, json) {
   var contents = fs.readFileSync(
     path.join(__dirname, '..', 'fixtures', filename), (json ? 'ascii' : null));

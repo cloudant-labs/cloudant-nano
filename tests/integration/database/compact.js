@@ -31,6 +31,10 @@ it('should store and delete `goofy`', function(assert) {
 
 it('should have run the compaction', function(assert) {
   db.compact(function(error) {
+    if (helpers.usingCloudant) {
+      assert.ok('compaction is automatic on Cloudant');
+      return assert.end();
+    }
     assert.equal(error, null, 'compact should respond');
     db.info(function(error, info) {
       assert.equal(error, null, 'info should respond');
@@ -42,6 +46,10 @@ it('should have run the compaction', function(assert) {
 });
 
 it('should finish compaction before ending', function(assert) {
+  if (helpers.usingCloudant) {
+    assert.ok('compaction is automatic on Cloudant');
+    return assert.end();
+  }
   function nextWhenFinished() {
     db.info(function(err, info) {
       if (err) {
