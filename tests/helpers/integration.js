@@ -17,7 +17,7 @@ var debug = require('debug');
 var path = require('path');
 var harness = require('tape-it');
 var endsWith = require('endswith');
-var cfg = require('../fixtures/cfg');
+var cfg = require('./cfg');
 var nano = require('../../lib/nano');
 var helpers = require('./');
 
