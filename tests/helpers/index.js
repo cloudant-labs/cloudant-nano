@@ -18,7 +18,7 @@ var url = require('url');
 var nano = require('../../lib/nano');
 
 var helpers = exports;
-var cfg = helpers.cfg = require('../fixtures/cfg');
+var cfg = helpers.cfg = require('./cfg');
 var auth = url.parse(cfg.admin).auth.split(':');
 
 helpers.noopTest = function(t){ t.end(); };
@@ -32,6 +32,8 @@ helpers.pixel = 'Qk06AAAAAAAAADYAAAAoAAAAAQAAAP////8BABgAAAAA' +
 
 helpers.username = auth[0];
 helpers.password = auth[1];
+
+helpers.usingCloudant = cfg.usingCloudant;
 
 helpers.loadFixture = function helpersLoadFixture(filename, json) {
   var contents = fs.readFileSync(

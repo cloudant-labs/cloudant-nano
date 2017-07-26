@@ -15,6 +15,14 @@
 var async = require('async');
 var helpers = require('../../helpers/integration');
 var harness = helpers.harness(__filename);
+
+var replicatorCheckTimeout = 3000; // 3s
+
+if (helpers.usingCloudant) {
+  var replicatorCheckTimeout = 60000; // 60s
+  harness.timeout = 90000; // 90s
+}
+
 var it = harness.it;
 var db = harness.locals.db;
 var nano = harness.locals.nano;
@@ -56,7 +64,7 @@ it('should be able to replicate (replicator) three docs', function(assert) {
           })
         })
       }, 
-      3000)
+      replicatorCheckTimeout)
     };
     waitForReplication();
   });
@@ -85,7 +93,7 @@ it('should be able to replicate (replicator) to a `nano` object', function(asser
           });
         })
       }, 
-      3000)
+      replicatorCheckTimeout)
     };
     waitForReplication();
   });
@@ -114,7 +122,7 @@ it('should be able to replicate (replicator) with params', function(assert) {
           });  
         })
       }, 
-      3000)
+      replicatorCheckTimeout)
     };
     waitForReplication();
   });
