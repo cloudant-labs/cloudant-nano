@@ -1,4 +1,14 @@
-[![Build Status](https://travis-ci.org/apache/couchdb-nano.svg?branch=master)](https://travis-ci.org/apache/couchdb-nano)![Coverage](https://img.shields.io/badge/coverage-100%-ff69b4.svg)[![dependencies Status](https://david-dm.org/apache/couchdb-nano/status.svg)](https://david-dm.org/apache/couchdb-nano)[![NPM](http://img.shields.io/npm/v/nano.svg?style=flat-square)](https://www.npmjs.com/package/nano)
+[![Travis](https://img.shields.io/travis/cloudant-labs/cloudant-nano.svg?branch=master)](https://travis-ci.org/cloudant-labs/cloudant-nano)
+
+[![NPM](https://nodei.co/npm/cloudant-nano.png?compact=true)](https://nodei.co/npm/cloudant-nano/)
+
+---
+
+This is a fork of the Apache [couchdb-nano](https://github.com/apache/couchdb-nano) project.
+
+This fork is maintained by IBM Cloudant in order to provide fixes for the [nodejs-cloudant](https://github.com/cloudant/nodejs-cloudant) library.
+
+---
 
 # nano
 
