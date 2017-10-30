@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "request": "^2.81.0",
-    "cloudant-follow": "^0.13.0",
+    "cloudant-follow": "~0",
     "errs": "^0.3.2",
     "underscore": "^1.8.3",
     "debug": "^3.1.0"
