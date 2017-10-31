@@ -1,3 +1,5 @@
+# UNRELEASED
+
 # 6.7.0 (2017-10-31)
 - [UPGRADED] Use latest 0.x cloudant-follow version.
 

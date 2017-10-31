@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git@github.com:cloudant-labs/cloudant-nano.git"
   },
-  "version": "6.7.0",
+  "version": "6.8.0-SNAPSHOT",
   "author": {
     "name": "IBM Cloudant",
     "email": "support@cloudant.com"
